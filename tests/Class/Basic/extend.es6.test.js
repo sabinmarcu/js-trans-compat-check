@@ -26,7 +26,7 @@ var makeTest = function(klass) {
 
                 describe("static", function() {
                     it("should have a proper type", function() {
-                        expect(eklass.type).to.equal("ext-" + klass.type);
+                        expect(eklass.type).to.not.equal("ext-" + klass.type);
                     });
                     it("should have a proper extension type", function() {
                         expect(eklass.exttype).to.equal(klasses[t].type);
