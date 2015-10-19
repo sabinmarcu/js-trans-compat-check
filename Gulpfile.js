@@ -2,7 +2,7 @@
 
 require("babel/register");
 require("coffee-script/register");
-require("LiveScript");
+require("livescript");
 
 var gulp = require("gulp"), mocha = require("gulp-mocha"), notify = require("gulp-notify");
 
