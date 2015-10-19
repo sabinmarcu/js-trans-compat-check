@@ -7,7 +7,7 @@ require("livescript");
 var gulp = require("gulp"), mocha = require("gulp-mocha"), notify = require("gulp-notify");
 
 gulp.task("test", function() {
-    return gulp.src("tests/**/*.test.*", { read: false }).pipe(mocha({reporter: "nyan"}))
+    return gulp.src("tests/**/*.test.*", { read: false }).pipe(mocha({reporter: "spec"}))
     // .on("error", notify.onError({title: "Test Error"})).pipe(notify({title: "Success!", message: "Tests successful!"}));
 });
 

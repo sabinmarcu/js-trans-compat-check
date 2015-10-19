@@ -32,7 +32,7 @@ describe("ES5 Demo Class Basic", function() {
     describe("#getInstance()", function() {
         var x = DemoClass.getInstance(), y = DemoClass.getInstance();
         it("should return same uuids", function() {
-            expect(x.uuid).to.not.equal(y.uuid);
+            expect(x.uuid).to.equal(y.uuid);
         });
         it("should return same objects", function() {
             expect(x).to.equal(y);
