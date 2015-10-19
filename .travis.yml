@@ -1,8 +1,14 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- '0.11'
+- '0.10'
 before_script:
-  - npm install -g gulp
-  - npm install .
+- npm install -g gulp
+- npm install .
 script: gulp
+deploy:
+  provider: heroku
+  api_key:
+    secure: fFQs8O1akoCnWo6FmS/0q1tSvL9AwB8aB14JwJy2Ro6N2olFX0MLgKeM5QI3TVowFLFH/wB05seFi3/ryXti4/FKzN5otIN2Eix8N7Z0T/6AOerZXbmmUxDrScOZzQ3KSQBv7ZBmEWL5TvmTp5M2AnqdBBzXG27AjoftDYEiMIomgT1nAb4wA5U7dtxhs4P/PZuF475kS36wUTXQGBaRDmkSZqC/E9zaCJ8XpQ0rrjMr16ggTyG3+zmFvHAKGXRw+0dLiD3l5RRHbxRQ8K3ZaY4vko/zE0a+0Nq02FoIOaSl410SFOAV3yJNnJ3lTajE6jepkGB1w2QzUnX08gYJTn4wUkx3/TnFo0PiUv380PFMa1bVatacCJKZdVnXSnFU4pyR8yu7jolmIKkYfjIpILgKctn2J5RCmEaxYlSD++bEPttI2MBZ3Nzvf4HzqqDrkCbF5tVOKyKwJXW6LbLsVhf/c6DtGxTGoDzcHJtxCOoVlNf9oYZ73kkdckJCxXXDmCLOZy7eeCOCoerZs62h0bwWYL0kZzOMh+aar0ET7l55KRvDIeYkNvmYZqVvsLPzHH59Yv4cW8e9VwIZZvdw5AcnR4JalDlzxEGOekY2i9P7rB+YlblNb2mg2Kj6PR/V152V+wFMrYOKRJVI4lT3OgMqQ3RPaeU1lJff3oBtA64=
+  app: js-trans-compat-check
+  run: "node server.js"
